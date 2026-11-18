@@ -1,16 +1,21 @@
 """Flat: бизнес-операции непосредственно зависят от database.SQLiteRepository."""
 
+import os
 from dataclasses import replace
 from uuid import uuid4
 
 from database import SQLiteRepository
+from json_repository import JSONRepository
 from models import Course, Grade, NotFoundError, Student, ValidationError
 from utils import integer, text
 
 
 class UniversityService:
     def __init__(self, path):
-        self.repo = SQLiteRepository(path)
+        backend = os.environ.get("STORAGE", "sqlite")
+        if backend not in {"sqlite", "json"}:
+            raise ValidationError("STORAGE должен быть sqlite или json")
+        self.repo = (SQLiteRepository if backend == "sqlite" else JSONRepository)(path)
 
     def add_student(self, name: str) -> Student:
         student = Student(str(uuid4()), text(name, "Имя"))
