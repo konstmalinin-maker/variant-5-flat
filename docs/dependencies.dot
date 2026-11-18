@@ -1,0 +1,23 @@
+
+digraph G {
+    concentrate = true;
+
+    rankdir = TB;
+    node [style=filled,fillcolor="#ffffff",fontcolor="#000000",fontname=Helvetica,fontsize=10];
+
+    database [fillcolor="#b34c4c",fontcolor="#ffffff"];
+    handlers [fillcolor="#9d9d43"];
+    json_repository [fillcolor="#4cb34c"];
+    main_py [fillcolor="#569f9f",label="main.py"];
+    models [fillcolor="#2222e7",fontcolor="#ffffff"];
+    utils [fillcolor="#b34cb3",fontcolor="#ffffff"];
+    database -> handlers [fillcolor="#b34c4c"];
+    handlers -> main_py [fillcolor="#9d9d43",minlen="2"];
+    json_repository -> handlers [fillcolor="#4cb34c"];
+    models -> database [fillcolor="#2222e7"];
+    models -> handlers [fillcolor="#2222e7"];
+    models -> json_repository [fillcolor="#2222e7"];
+    models -> main_py [fillcolor="#2222e7",minlen="2"];
+    models -> utils [fillcolor="#2222e7"];
+    utils -> handlers [fillcolor="#b34cb3"];
+}
