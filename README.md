@@ -55,4 +55,4 @@ CI запускает Ruff, pytest-cov ≥80%, radon, проверку архи�
 
 ## Отчёт
 
-[Практическая работа №7: вариант 5, все задания A–G](https://github.com/konstmalinin-maker/variant-5-modular/blob/main/PR7_%D0%9E%D1%82%D1%87%D1%91%D1%82_%D0%9C%D0%B0%D0%BB%D0%B8%D0%BD%D0%B8%D0%BD.md). Основной PDF — 8 страниц; скриншоты и сырые измерения приложены к Modular-репозиторию.
+[Практическая работа №7: вариант 5, все задания A–G](https://github.com/konstmalinin-maker/variant-5-modular/blob/main/PR7_%D0%9E%D1%82%D1%87%D1%91%D1%82_%D0%9C%D0%B0%D0%BB%D0%B8%D0%BD%D0%B8%D0%BD.md). Основной PDF содержит скриншоты выполнения основной части и каждого задания A–G; полные журналы и оригиналы PNG приложены к Modular-репозиторию.
