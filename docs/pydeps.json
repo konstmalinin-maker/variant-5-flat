@@ -1,0 +1,70 @@
+{
+    "database": {
+        "bacon": 2,
+        "imported_by": [
+            "handlers"
+        ],
+        "imports": [
+            "models"
+        ],
+        "name": "database",
+        "path": "/workspace/variant-5-flat/database.py"
+    },
+    "handlers": {
+        "bacon": 1,
+        "imported_by": [
+            "main.py"
+        ],
+        "imports": [
+            "database",
+            "json_repository",
+            "models",
+            "utils"
+        ],
+        "name": "handlers",
+        "path": "/workspace/variant-5-flat/handlers.py"
+    },
+    "json_repository": {
+        "bacon": 2,
+        "imported_by": [
+            "handlers"
+        ],
+        "imports": [
+            "models"
+        ],
+        "name": "json_repository",
+        "path": "/workspace/variant-5-flat/json_repository.py"
+    },
+    "main.py": {
+        "bacon": 0,
+        "imports": [
+            "handlers",
+            "models"
+        ],
+        "name": "main.py",
+        "path": null
+    },
+    "models": {
+        "bacon": 1,
+        "imported_by": [
+            "database",
+            "handlers",
+            "json_repository",
+            "main.py",
+            "utils"
+        ],
+        "name": "models",
+        "path": "/workspace/variant-5-flat/models.py"
+    },
+    "utils": {
+        "bacon": 2,
+        "imported_by": [
+            "handlers"
+        ],
+        "imports": [
+            "models"
+        ],
+        "name": "utils",
+        "path": "/workspace/variant-5-flat/utils.py"
+    }
+}

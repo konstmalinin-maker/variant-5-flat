@@ -1,7 +1,7 @@
 [tool.pytest.ini_options]
 junit_family = "xunit1"
 [tool.coverage.run]
-source = ["main", "handlers", "models", "database", "utils"]
+source = ["main", "handlers", "models", "database", "utils", "json_repository"]
 patch = ["subprocess"]
 [tool.ruff]
 line-length = 110
