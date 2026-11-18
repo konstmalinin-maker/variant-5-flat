@@ -85,3 +85,15 @@ class UniversityService:
         if len(rows) == len(state.grades):
             raise NotFoundError("Студент не записан на курс")
         self.repo.save(replace(state, grades=rows))
+
+
+def export_to_csv(service, student_id: str, path) -> int:
+    """Экспорт учебного плана; CSV quoting выполняет стандартная библиотека."""
+    import csv
+
+    with open(path, "w", encoding="utf-8-sig", newline="") as stream:
+        writer = csv.writer(stream)
+        writer.writerow(["course_id", "title", "credits", "grade"])
+        rows = service.list(student_id)
+        writer.writerows((c.id, c.title, c.credits, "" if value is None else value) for c, value in rows)
+    return len(rows)

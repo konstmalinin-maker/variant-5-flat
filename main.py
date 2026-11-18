@@ -4,7 +4,7 @@ import argparse
 import os
 import sys
 
-from handlers import UniversityService
+from handlers import UniversityService, export_to_csv
 from models import DomainError
 
 
@@ -23,10 +23,15 @@ def main(argv=None):
             sub.add_argument("course_id")
         if name == "grade":
             sub.add_argument("value", type=int)
+    export = commands.add_parser("export")
+    export.add_argument("student_id")
+    export.add_argument("path")
     args = parser.parse_args(argv)
     try:
         service = UniversityService(os.environ.get("DATA_PATH", "university.sqlite3"))
-        if args.command == "add-student":
+        if args.command == "export":
+            print(f"Экспортировано: {export_to_csv(service, args.student_id, args.path)}")
+        elif args.command == "add-student":
             print(service.add_student(args.name).id)
         elif args.command == "add-course":
             print(service.add_course(args.title, args.credits).id)
