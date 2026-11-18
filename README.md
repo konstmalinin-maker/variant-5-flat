@@ -52,3 +52,7 @@ CI запускает Ruff, pytest-cov ≥80%, radon, проверку архи�
 Данные экспериментов и методика: docs/experiments.json и docs/metrics-method.md. Время поиска — реальный запуск rg; время изменений — автоматизированная запись файлов, без времени обдумывания и проверки. Это не измерение скорости человека.
 
 Исходная версия: тег flat-baseline. Допзадание B: ветка refactor/flat-to-modular, тег refactor-complete; четыре последовательных коммита выделения domain/application/infrastructure/presentation, после каждого проходят исходные 45 тестов. Main сохраняет плоскую структуру для сравнения.
+
+## Отчёт
+
+[Практическая работа №7: вариант 5, все задания A–G](https://github.com/konstmalinin-maker/variant-5-modular/blob/main/PR7_%D0%9E%D1%82%D1%87%D1%91%D1%82_%D0%9C%D0%B0%D0%BB%D0%B8%D0%BD%D0%B8%D0%BD.md). Основной PDF — 8 страниц; скриншоты и сырые измерения приложены к Modular-репозиторию.
